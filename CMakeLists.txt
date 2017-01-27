@@ -14,9 +14,11 @@ add_definitions(-DHAVE_CONFIG_H)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/)
 include_directories(${DARLING_TOP_DIRECTORY}/platform-include)
+include_directories(${CMAKE_SOURCE_DIR}/src/libmalloc/include)
 
 set(DYLIB_INSTALL_NAME "/usr/lib/libsqlite3.0.dylib")
 add_darling_library(sqlite3 SHARED sqlite3.c)
+make_fat(sqlite3)
 target_link_libraries(sqlite3 system)
 set_target_properties(sqlite3 PROPERTIES OUTPUT_NAME "sqlite3.0")
 
