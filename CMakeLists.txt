@@ -17,6 +17,9 @@ include_directories(${DARLING_TOP_DIRECTORY}/platform-include)
 include_directories(${CMAKE_SOURCE_DIR}/src/libmalloc/include)
 
 set(DYLIB_INSTALL_NAME "/usr/lib/libsqlite3.0.dylib")
+set(DYLIB_COMPAT_VERSION "9.0.0")
+set(DYLIB_CURRENT_VERSION "252.0.0")
+
 add_darling_library(sqlite3 SHARED sqlite3.c)
 make_fat(sqlite3)
 target_link_libraries(sqlite3 system)
