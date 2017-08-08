@@ -10,7 +10,7 @@ endif(COMMAND cmake_policy)
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -msse -msse2 -msse3 -w -nostdinc")
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -D__DARWIN_UNIX03 -fPIC -U__linux__")
 
-add_definitions(-DHAVE_CONFIG_H)
+add_definitions(-DHAVE_CONFIG_H -DSQLITE_ENABLE_FTS5)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/)
 include_directories(${DARLING_TOP_DIRECTORY}/platform-include)
