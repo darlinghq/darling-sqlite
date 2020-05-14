@@ -13,8 +13,6 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -D__DARWIN_UNIX03 -fPIC")
 add_definitions(-DHAVE_CONFIG_H -DSQLITE_ENABLE_FTS5)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/)
-include_directories(${DARLING_TOP_DIRECTORY}/platform-include)
-include_directories(${CMAKE_SOURCE_DIR}/src/libmalloc/include)
 
 set(DYLIB_INSTALL_NAME "/usr/lib/libsqlite3.0.dylib")
 set(DYLIB_COMPAT_VERSION "9.0.0")
