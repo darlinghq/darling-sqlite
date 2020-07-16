@@ -15,16 +15,6 @@
 extern "C" {
 #endif
 
-#define SQLITE_TRACE_STMT       0x01
-#define SQLITE_TRACE_PROFILE    0x02
-#define SQLITE_TRACE_ROW        0x04
-#define SQLITE_TRACE_CLOSE      0x08
-
-extern int sqlite3_trace_v2(sqlite3*,
-		unsigned uMask,
-		int(*xCallback)(unsigned,void*,void*,void*),
-		void *pCtx);
-
 #define SQLITE_LOCKSTATE_OFF    0
 #define SQLITE_LOCKSTATE_ON     1
 #define SQLITE_LOCKSTATE_NOTADB 2
