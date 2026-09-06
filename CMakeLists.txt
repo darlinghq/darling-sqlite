@@ -36,5 +36,6 @@ if (NOT DARLING_NO_EXECUTABLES)
 	target_link_libraries(sqlite sqlite3)
 
 	install(TARGETS sqlite DESTINATION libexec/darling/usr/bin)
+	InstallSymlink("sqlite" "${CMAKE_INSTALL_PREFIX}/libexec/darling/usr/bin/sqlite3")
 endif (NOT DARLING_NO_EXECUTABLES)
 
