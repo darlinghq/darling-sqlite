@@ -34,8 +34,9 @@ if (NOT DARLING_NO_EXECUTABLES)
 	include(darling_exe)
 	add_darling_executable(sqlite shell.c)
 	target_link_libraries(sqlite sqlite3)
+	# The target name sqlite3 is taken by the library.
+	set_target_properties(sqlite PROPERTIES OUTPUT_NAME "sqlite3")
 
 	install(TARGETS sqlite DESTINATION libexec/darling/usr/bin)
-	InstallSymlink("sqlite" "${CMAKE_INSTALL_PREFIX}/libexec/darling/usr/bin/sqlite3")
 endif (NOT DARLING_NO_EXECUTABLES)
 
